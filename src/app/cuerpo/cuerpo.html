@@ -1,1 +1,20 @@
-<p>cuerpo works!</p>
+<main class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8">
+            <div class="card shadow">
+                <img src="img/wallpaper.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <p class="card-text">
+                        @if (listadoIdols.length > 0){
+                        {{listadoIdols}}
+                        } @else {
+                    <div class="alert alert-warning">Array vacio</div>
+                    }
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</main>

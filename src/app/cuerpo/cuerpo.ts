@@ -8,4 +8,46 @@ import { Component } from '@angular/core';
 })
 export class Cuerpo {
 
+  //Atributos
+  public listadoIdols: Array<any>;
+
+  //Constructores
+  constructor() {
+    this.listadoIdols = [{
+      nombre: "Sasshi",
+      imagen: "",
+      ataque: 45,
+      defensa: 93,
+      poder: 350,
+      vida: 100
+    },
+    {
+      nombre: "Acchan",
+      imagen: "",
+      ataque: 83,
+      defensa: 63,
+      poder: 550,
+      vida: 80
+    },
+    {
+      nombre: "Harugon",
+      imagen: "",
+      ataque: 75,
+      defensa: 73,
+      poder: 450,
+      vida: 100
+    },
+    {
+      nombre: "Kojiharu",
+      imagen: "",
+      ataque: 120,
+      defensa: 50,
+      poder: 550,
+      vida: 60
+    }
+    ]
+  }
+
+
+  //Métodos
 }
