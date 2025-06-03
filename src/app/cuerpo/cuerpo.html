@@ -1,17 +1,62 @@
-<main class="container">
+<main class="container mb-4">
     <div class="row">
         <div class="col"></div>
         <div class="col-8">
             <div class="card shadow">
                 <img src="img/wallpaper.jpg" class="card-img-top" alt="">
                 <div class="card-body">
-                    <p class="card-text">
-                        @if (listadoIdols.length > 0){
+                    <div class="card-text">
+                        <!-- @if (listadoIdols.length > 0){
                         {{listadoIdols}}
                         } @else {
                     <div class="alert alert-warning">Array vacio</div>
-                    }
-                    </p>
+                    } -->
+
+                        <ul class="list-group mb-4">
+                            <!-- @for (idol of listadoIdols; track idol) {
+                        <li
+                        class="list-group-item"
+                        [class]="{
+                            'list-group-item-success': idol.vida > 0,
+                            'list-group-item-danger' : idol.vida <= 0
+                            }">
+                            {{idol.nombre}} Vida: {{idol.vida}}
+                        </li>
+                        <li class="list-group-item">{{idol.ataque}}</li>
+                        <li class="list-group-item">{{idol.defensa}}</li>
+                        <li class="list-group-item">{{idol.poder}}</li>
+                        <li class="list-group-item">{{idol.vida}}</li>
+                        } @empty {
+                            <li class="list-group-item list-group-item-warning">Lista vacía</li>
+                        } -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- @for (idol of listadoIdols; track idol) {
+                            @if (idol.vida > 0) {
+                            <li class="list-group-item list-group-item-success">{{idol.nombre}}</li>
+                            } @else {
+                            <li class="list-group-item list-group-item-danger">{{idol.nombre}}</li>
+                            }
+                            } -->
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

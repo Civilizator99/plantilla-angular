@@ -19,7 +19,7 @@ export class Cuerpo {
       ataque: 45,
       defensa: 93,
       poder: 350,
-      vida: 100
+      vida: 0
     },
     {
       nombre: "Acchan",
@@ -35,7 +35,7 @@ export class Cuerpo {
       ataque: 75,
       defensa: 73,
       poder: 450,
-      vida: 100
+      vida: 0
     },
     {
       nombre: "Kojiharu",
@@ -45,7 +45,8 @@ export class Cuerpo {
       poder: 550,
       vida: 60
     }
-    ]
+    ];
+    // this.listadoIdols = []; //dejar lista vacía
   }
 
 
