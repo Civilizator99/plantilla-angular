@@ -12,8 +12,8 @@
                     <div class="alert alert-warning">Array vacio</div>
                     } -->
 
-                        <ul class="list-group mb-4">
-                            <!-- @for (idol of listadoIdols; track idol) {
+                        <!-- <ul class="list-group mb-4">
+                            @for (idol of listadoIdols; track idol) {
                         <li
                         class="list-group-item"
                         [class]="{
@@ -28,34 +28,42 @@
                         <li class="list-group-item">{{idol.vida}}</li>
                         } @empty {
                             <li class="list-group-item list-group-item-warning">Lista vacía</li>
-                        } -->
+                        }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <!-- @for (idol of listadoIdols; track idol) {
+                         @for (idol of listadoIdols; track idol) {
                             @if (idol.vida > 0) {
                             <li class="list-group-item list-group-item-success">{{idol.nombre}}</li>
                             } @else {
                             <li class="list-group-item list-group-item-danger">{{idol.nombre}}</li>
                             }
-                            } -->
-                        </ul>
+                            } 
+                        </ul> -->
+
+                        @if (listadoIdols.length > 0) {
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Poder</th>
+                                    <th>Vida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for(idol of listadoIdols; track idol){
+                                <tr>
+                                    <td>{{idol.imagen}}</td>
+                                    <td>{{idol.nombre}}</td>
+                                    <td>{{idol.poder}}</td>
+                                    <td>{{idol.vida}}</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                        } @else {
+                        <div class="alert alert-info">Div vacío</div>
+                        }
                     </div>
                 </div>
             </div>
