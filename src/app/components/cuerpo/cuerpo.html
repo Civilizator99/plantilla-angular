@@ -2,73 +2,7 @@
     <div class="row">
         <div class="col"></div>
         <div class="col-8">
-            <!-- <code>{{listadoIdols | json}}</code> -->
-            <div class="card shadow body-img">
-                <img src="img/wallpaper.jpg" class="card-img-top" alt="" style="width: 100%; height: 60vh;">
-                <div class="card-body">
-                    <div class="card-text">
-                        <!-- @if (listadoIdols.length > 0){
-                        {{listadoIdols}}
-                        } @else {
-                    <div class="alert alert-warning">Array vacio</div>
-                    } -->
-
-                        <!-- <ul class="list-group mb-4">
-                            @for (idol of listadoIdols; track idol) {
-                        <li
-                        class="list-group-item"
-                        [class]="{
-                            'list-group-item-success': idol.vida > 0,
-                            'list-group-item-danger' : idol.vida <= 0
-                            }">
-                            {{idol.nombre}} Vida: {{idol.vida}}
-                        </li>
-                        <li class="list-group-item">{{idol.ataque}}</li>
-                        <li class="list-group-item">{{idol.defensa}}</li>
-                        <li class="list-group-item">{{idol.poder}}</li>
-                        <li class="list-group-item">{{idol.vida}}</li>
-                        } @empty {
-                            <li class="list-group-item list-group-item-warning">Lista vacía</li>
-                        }
-
-
-                         @for (idol of listadoIdols; track idol) {
-                            @if (idol.vida > 0) {
-                            <li class="list-group-item list-group-item-success">{{idol.nombre}}</li>
-                            } @else {
-                            <li class="list-group-item list-group-item-danger">{{idol.nombre}}</li>
-                            }
-                            } 
-                        </ul> -->
-
-                        @if (listadoIdols.length > 0) {
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Imagen</th>
-                                    <th>Nombre</th>
-                                    <th>Poder</th>
-                                    <th>Vida</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @for(idol of listadoIdols; track idol){
-                                <tr>
-                                    <td><img class="avatar" [src]="idol.imagen || 'img/defaultAvatar.jpg' "></td>
-                                    <td>{{idol.nombre | titlecase}} </td>
-                                    <td>{{idol.poder}}</td>
-                                    <td><meter [value]="idol.vida" min="0" max="100" low="26" high="51" optimum="100"></meter></td>
-                                    <td>{{idol.vida}}</td>
-                                </tr>
-                                }
-                            </tbody>
-                        </table>
-                        } @else {
-                        <div class="alert alert-info">Div vacío</div>
-                        }
-                    </div>
-                </div>
-            </div>
+           <app-listado-tablas></app-listado-tablas>
         </div>
         <div class="col"></div>
     </div>

@@ -1,0 +1,32 @@
+ <div class="card shadow body-img">
+                <img src="img/wallpaper.jpg" class="card-img-top" alt="" style="width: 100%; height: 80vh;">
+                <div class="card-body">
+                    <div class="card-text">
+                        @if (listadoIdols.length > 0) {
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Poder</th>
+                                    <th>Vida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for(idol of listadoIdols; track idol){
+                                <tr>
+                                    <td><img class="avatar" [src]="idol.imagen || 'img/defaultAvatar.jpg' "></td>
+                                    <td>{{idol.nombre}} </td>
+                                    <td>{{idol.poder}}</td>
+                                    <td><meter [value]="idol.vida" min="0" max="100" low="26" high="51" optimum="100"></meter></td>
+                                    <td>{{idol.vida}}</td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                        } @else {
+                        <div class="alert alert-info">Div vacío</div>
+                        }
+                    </div>
+                </div>
+            </div>

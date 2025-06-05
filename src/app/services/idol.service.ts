@@ -48,7 +48,16 @@ public getIdols(): Idol[]{
       defensa: 50,
       poder: 550,
       vida: 100
-    }
+    },
+    {
+      nombre: "Erii",
+      imagen: "img/erii1.jpg",
+      honor: 60,
+      ataque: 75,
+      defensa: 73,
+      poder: 450,
+      vida: 52
+    },
     // this.listadoIdols = []; //dejar lista vacía
     ];
     return listadoIdols;
