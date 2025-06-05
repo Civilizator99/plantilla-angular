@@ -1,1 +1,81 @@
-<p>listado-tarjetas works!</p>
+<!-- La etiqueta se repetirá tantas veces como elementos haya en el array idols -->
+@for(idol of idols; track idols){
+<div class="card shadow mb-4">
+    <div class="row p-3">
+        <div class="col-4">
+            <img class="img-fluid rounded-3 bg-dark-subtle mt-5" [src]="idol.imagen || 'img/defaultAvatar.jpg'">
+        </div>
+        <!-- <div class="col-8">
+            <div class="card-body">
+                <h5 class="card-title">Erii</h5>
+                <ul>
+                    <li class="list-grou-item">
+                        HP
+                        <div class="progress" role="progressbar">
+                            <div class="progress-bar" style="width: 25%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+ <!-- Columna de los datos -->
+        <div class="col-8">
+            <div class="card-body">
+                <h5 class="card-title">{{idol.nombre}}</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <label for="" class="me-1"><i class="bi bi-heart-pulse"></i></label>
+                            <div class="progress flex-grow-1" role="progressbar">
+                                <div class="progress-bar bg-danger" [style.width.%]="idol.vida">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <label for="" class="me-1"><i class="bi bi-crosshair"></i></label>
+                            <div class="progress flex-grow-1" role="progressbar">
+                                <div class="progress-bar bg-success" [style.width.%]="idol.ataque">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <label for="" class="me-1"><i class="bi bi-shield"></i></label>
+                            <div class="progress flex-grow-1" role="progressbar">
+                                <div class="progress-bar bg-warning" [style.width.%]="idol.defensa">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <label for="" class="me-1"><i class="bi bi-lightning"></i></label>
+                            <div class="progress flex-grow-1" role="progressbar">
+                                <div class="progress-bar bg-info" [style.width.%]="(idol.poder * 100) / 500">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+} @empty {
+    <div class="alert alert-warning">
+        No hay Idols a mostrar
+    </div>
+}
