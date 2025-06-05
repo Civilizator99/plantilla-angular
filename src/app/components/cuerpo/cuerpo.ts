@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IdolService } from '../../services/idol.service';
 
 @Component({
   selector: 'app-cuerpo',
@@ -6,53 +7,20 @@ import { Component } from '@angular/core';
   templateUrl: './cuerpo.html',
   styleUrl: './cuerpo.css'
 })
-export class Cuerpo {
+export class Cuerpo implements OnInit {
 
   //Atributos
-  public listadoIdols: Array<Idol>;
+  public listadoIdols: Idol[];
+  public idolService: IdolService;
 
   //Constructores
-  constructor() {
-    this.listadoIdols = [{
-      nombre: "Sasshi",
-      imagen: "",
-      honor: 98,
-      ataque: 45,
-      defensa: 93,
-      poder: 350,
-      vida: 0
-    },
-    {
-      nombre: "Acchan",
-      imagen: "",
-      honor: 92,
-      ataque: 83,
-      defensa: 63,
-      poder: 550,
-      vida: 80
-    },
-    {
-      nombre: "Harugon",
-      imagen: "",
-      honor: 60,
-      ataque: 75,
-      defensa: 73,
-      poder: 450,
-      vida: 0
-    },
-    {
-      nombre: "Kojiharu",
-      imagen: "",
-      honor: 80,
-      ataque: 120,
-      defensa: 50,
-      poder: 550,
-      vida: 60
-    }
-    ];
-    // this.listadoIdols = []; //dejar lista vacía
+  constructor(idolService: IdolService) {
+    this.idolService = idolService;
+    this.listadoIdols = this.idolService.getIdols();
   }
 
-
+ngOnInit(): void {
+  
+}
   //Métodos
 }
