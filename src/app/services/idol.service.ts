@@ -15,12 +15,12 @@ export class IdolService {
 public getIdols(): Idol[]{
   const listadoIdols: Idol[] = [{
       nombre: "Sasshi",
-      imagen: "",
+      imagen: "img/sasshi1.jpg",
       honor: 98,
       ataque: 45,
       defensa: 93,
       poder: 350,
-      vida: 0
+      vida: 25
     },
     {
       nombre: "Acchan",
@@ -29,25 +29,25 @@ public getIdols(): Idol[]{
       ataque: 83,
       defensa: 63,
       poder: 550,
-      vida: 80
+      vida: 26
     },
     {
       nombre: "Harugon",
-      imagen: "",
+      imagen: "img/harugon1.jpg",
       honor: 60,
       ataque: 75,
       defensa: 73,
       poder: 450,
-      vida: 0
+      vida: 52
     },
     {
       nombre: "Kojiharu",
-      imagen: "",
+      imagen: "img/kojiharu1.jpg",
       honor: 80,
       ataque: 120,
       defensa: 50,
       poder: 550,
-      vida: 60
+      vida: 100
     }
     // this.listadoIdols = []; //dejar lista vacía
     ];
